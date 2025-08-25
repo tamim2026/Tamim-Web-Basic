@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8">
+  <title>TAMIM DEVELOPER</title>
+  <style>
+    body {
+      font-family: "Poppins", sans-serif;
+      margin: 0;
+      background: linear-gradient(120deg, #6a11cb, #2575fc);
+      color: white;
+      text-align: center;
+    }
+    header {
+      padding: 40px 20px;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 42px;
+      font-weight: bold;
+      text-shadow: 2px 2px 5px black;
+    }
+    header p {
+      margin: 5px 0 0;
+      font-size: 18px;
+      opacity: 0.8;
+    }
+    .buttons {
+      margin: 30px 0;
+    }
+    button {
+      padding: 15px 25px;
+      margin: 10px;
+      font-size: 18px;
+      border: none;
+      border-radius: 30px;
+      cursor: pointer;
+      color: white;
+      background: rgba(255,255,255,0.2);
+      backdrop-filter: blur(5px);
+      transition: 0.3s;
+    }
+    button:hover {
+      background: white;
+      color: #2575fc;
+    }
+    .content {
+      display: none;
+      max-width: 900px;
+      margin: auto;
+      background: rgba(255,255,255,0.1);
+      padding: 20px;
+      border-radius: 15px;
+      text-align: left;
+      margin-bottom: 40px;
+    }
+    .content h2 {
+      margin-top: 0;
+      color: #ffe600;
+    }
+    pre {
+      background: #1e1e1e;
+      color: #d4d4d4;
+      padding: 15px;
+      border-radius: 10px;
+      overflow-x: auto;
+    }
+  </style>
+  <script>
+    function showContent(id) {
+      document.querySelectorAll(".content").forEach(sec => sec.style.display = "none");
+      document.getElementById(id).style.display = "block";
+    }
+  </script>
+</head>
+<body>
+  <header>
+    <h1>TAMIM DEVELOPER</h1>
+    <p>💻 সহজভাবে HTML, CSS, JS & Bootstrap Basics শিখো</p>
+  </header>
+
+  <div class="buttons">
+    <button onclick="showContent('html')">HTML Basics</button>
+    <button onclick="showContent('css')">CSS Basics</button>
+    <button onclick="showContent('js')">JavaScript Basics</button>
+    <button onclick="showContent('bootstrap')">Bootstrap Basics</button>
+  </div>
+
+  <!-- HTML -->
+  <div class="content" id="html">
+    <h2>📌 HTML Basics</h2>
+    <pre>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;&lt;title&gt;আমার সাইট&lt;/title&gt;&lt;/head&gt;
+&lt;body&gt;
+  &lt;h1&gt;হেডিং&lt;/h1&gt;
+  &lt;p&gt;এটি একটি প্যারাগ্রাফ&lt;/p&gt;
+  &lt;a href="https://google.com"&gt;লিঙ্ক&lt;/a&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+    </pre>
+  </div>
+
+  <!-- CSS -->
+  <div class="content" id="css">
+    <h2>🎨 CSS Basics</h2>
+    <pre>
+p { color: red; }
+#idName { background: yellow; }
+.className { font-size: 20px; }
+
+div {
+  margin: 20px;
+  padding: 15px;
+  border: 2px solid black;
+}
+    </pre>
+  </div>
+
+  <!-- JavaScript -->
+  <div class="content" id="js">
+    <h2>⚡ JavaScript Basics</h2>
+    <pre>
+console.log("Hello World");
+
+function greet() {
+  alert("স্বাগতম!");
+}
+
+for (let i=0; i<5; i++) {
+  console.log(i);
+}
+    </pre>
+  </div>
+
+  <!-- Bootstrap -->
+  <div class="content" id="bootstrap">
+    <h2>🚀 Bootstrap Basics</h2>
+    <pre>
+&lt;link rel="stylesheet" 
+ href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"&gt;
+
+&lt;div class="container"&gt;
+  &lt;h1 class="text-primary text-center"&gt;Hello Bootstrap&lt;/h1&gt;
+  &lt;button class="btn btn-success"&gt;Click Me&lt;/button&gt;
+&lt;/div&gt;
+    </pre>
+  </div>
+</body>
+</html>
